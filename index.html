@@ -1,105 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="RX Watt, RXwatt, Wireless power transfer, WPT, microwave power transfer, rectennas, start-up, spin-out, University of Glasgow spinout, spinout, wireless power transmission, SWIPT, Simultaneous wireless information and power transfer, RF sensing, Mahmoud Wagih, antennas" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets2/style.css">
-    <title>RX Watt Ltd: Seamless recharging &amp maintenance-free sensing using long-range wireless power 
-</title>
+    <title>rx watt - The Future of Energy</title>
+    <!-- AOS Animation Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo-container">
-            <img src="images/rx_logo.png" alt="RX Watt Logo">
-        </div>
-        <a href="#about">  About</a>
-        <a href="#tech">  Technology</a>
-        <a href="#contact">  Team</a>
-   <!--     <a href="#contact">Contact</a> -->
-    </nav>
-
+    <!-- Top Navigation Bar -->
     <header>
-        <h1>Seamless recharging &amp maintenance-free sensing using long-range wireless RF power and data transfer and sensing</h1>
+        <nav>
+            <!-- Logo path reverted to original -->
+            <a href="#home" class="logo"><img src="images/rx_logo.png" alt="rx watt logo"></a>
+            <ul>
+                <li><a href="#scenarios">Technology</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#sustainability">Sustainability</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about" class="normal-section">
-        <h1>About RX Watt</h1>
-        <br>
-		<p>RX Watt Ltd. presents the first holistic solution for simultaneous wirleess power and data transfer, with integrated sensing functionalities. We deliver functional systems for battery-free and maintainence-free sensing systems applicable to industrial asset condition monitoring. </p>
-		<br>
-        <p>Our mission is to revolutionize the way electronic devices are powered, eliminating the need for traditional batteries and enabling battery-free sensing and seamless re-charging, covering industrial, healthcare, and consumer electronics.</p>
+    <main>
+        <!-- Hero Section with Background Video -->
+        <section id="home">
+            <div class="video-background">
+                <!-- Video path reverted to original -->
+                <video autoplay muted playsinline src="images/rxwatt_wireless_power.mp4"></video>
+            </div>
+            <div class="hero-content" data-aos="fade-in" data-aos-delay="300">
+                <h1 style="color:white;">Seamless wireless charging and battery-free sensing</h1>
+            </div>
+        </section>
+
+        <!-- Application Scenarios Section -->
+        <section id="scenarios" style="background:#1a1d24">
+            <div class="section-inner" data-aos="fade-up">
+				<center>
+
+                <br><br>
+                <div class="scenarios-container">
+                    <!-- Scenario image paths reverted to original -->
+                    <div class="scenario-item" data-aos="fade-up" data-aos-delay="200">
+                        <img src="images/gateway.jfif" alt="Remote Sensor Power">
+                        <div class="scenario-description">
+                            <h5>A Hub for Battery-Free Sensing</h5>
+							
+                            <p> <br>Packaged solution for wireless-powered indoor and outdoor sensors.</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/antenna3.jpg" alt="Aerospace Application">
+                        <div class="scenario-description">
+                            <h5>A Modular Sensing Platform</h5>
+                            <p> <br>Low-power RF sensing for intelligent machine-interaction.</p>
+                        </div>
+                    </div>
+                    <div class="scenario-item" data-aos="fade-up" data-aos-delay="100">
+                        <img src="images/gateway2.jpg" alt="Aerospace Application">
+                        <div class="scenario-description">
+                            <h5>Seamlessly-Integrated RF Hubs</h5>
+                            <p> <br>Bespoke RF hub development for simultaneous data and power delivery.</p>
+                        </div>
+                    </div>					
+                    <div class="scenario-item" data-aos="fade-up" data-aos-delay="300">
+                        <img src="images/train1.jpg" alt="Industrial Automation">
+                        <div class="scenario-description">
+                            <h5>Robust for Harsh Environments</h5>
+                            <p> <br>Reliable RF-powered sensors in harsh environments with context-aware antennas.</p>
+                        </div>
+                    </div>
+                </div>
+				<br>
+            </div>
+        </section>
+
+        <!-- Tech Features Section -->
+        <section id="features">
+            <div class="section-inner">
+                <h2 data-aos="fade-up">Multi-functional wireless RF power delivery, sensing, and communication <br></h2>
+                <div class="features-container">
+                    <!-- Feature 1 -->
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-image-container">
+                            <img src="images/rx_background.jpg" alt="an antenna wirelessly lighting an LED on a hand">
+                            <div class="feature-description">
+                                <p>Best-in-class power conversion efficiency and sensitivity, with custom silicon IP.</p>
+                            </div>
+                        </div>
+                        <h3>Long-Range Wireless Power Delivery</h3>
+                        <p>Maximum range of up to 10 to 30 m depending on receiver size and usecase.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-image-container">
+                            <img src="images/swipt.png" alt="Power split from an antenna to data and power">
+                            <div class="feature-description">
+                                <p>Capable of separating signals in a single RF receivers, to support communication and unaffected charging.</p>
+                            </div>
+                        </div>
+                        <h3>Simultaneous Power and Data Transfer</h3>
+                        <p>Low-power communication to/from the sensors using proprietary receivers.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                         <div class="feature-image-container">
+                            <img src="images/rfsensing.png" alt="Layout of data and AI processing">
+                            <div class="feature-description">
+                                <p>AI-assisted RF sensing with unmatched edge power saving.</p>
+                            </div>
+                        </div>
+                        <h3>Ultra-Low-Power Radio Frequency Sensing</h3>
+                        <p>Using ultra-low-power receivers for machine learning (ML)-enabled passive and remote RF sensing.</p>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-image-container">
+                             <img src="images/gui.png" alt="User interface showing data collection">
+                             <div class="feature-description">
+                                <p>We delivery data through reliable interfaces employing familiar protocols such as Bluetooth Low Energy.</p>
+                            </div>
+                        </div>
+                        <h3>Full-Stack Wireless Sensing Solution</h3>
+                        <p>Real-time sensor data delivery using, standard and application-driven interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Section -->
+        <section id="sustainability">
+            <div class="section-inner" data-aos="fade-up">
+                <h2>Sustainability-Driven Wireless Power Solutions</h2>
+				<center>
+                <p class="sustainability-text" style="color:white">Over 20,000 tonnes of batteries go to landfill every year, in the UK alone. <br> <br>We have ISO 14040 Life Cycle Assessments (LCAs) of the building blocks of our system, for demonstrated reductions in emissions over its full life cycle; our vision is to minimise the e-waste (WEEE) and embodied carbon of existing wireless tracking technologies.<br><br> <br> </p>
+            </div>
+        </section>
 		
-		<button class="email-button" onclick="location.href='mailto:info@RXWatt.com'">info@RXWatt.com</button>
+        <section id="action" class="dark-section">
 
-    </section>
+            <div class="section-inner" data-aos="fade-up">
+				<center>
 
-    <section id="tech" class="two-column-section">
-        <div class="content">
-            <h1>Our Tech</h1>
-				<ul>
-				  <li><h3>Builds upon a leading research track record with the <FONT COLOR=#C1D100>over 30 IEEE articles</FONT> on wireless-powered sensing and rectennas.</h3></li>
-				  <li><h3>Leverages nearly <FONT COLOR=#C1D100>£1M research funding</FONT> from UK Research and Innovation (UKRI) EPSRC, the Royal Academy of Engineering, and DSTL.</h3></li>
-				  <li><h3><FONT COLOR=#C1D100>Patent-pending</FONT> technology for joint RF sensing and wireless power and data transfer.</h3></li>
-				  <li><h3>Longest range battery-free Bluetooth Arm-based sensors, operating up to <FONT COLOR=#C1D100>35 metres</FONT> from the source. </h3></li>
-				  <li><h3>Operates the <FONT COLOR=#C1D100>license-free ISM bands</FONT>; compliant with the FCC EIRP limits. </h3></li>
-				</ul>
+				<h3>Get in touch to see how RF-powered sensing could make your operations more sustainable <br><br> </h3>
+
+				<a href="mailto:info@rxwatt.com" class="action-button">info@rxwatt.com</a>
+            </div>
+			
+        </section>
+
+		<!-- News Section -->
+		<section id="news" class="light-section">
+            <div class="section-inner" data-aos="fade-up">
+                <h2 style="color:#258F95">In The News</h2>
+                <div class="news-container">
+				
+                    <!-- News image paths reverted to original -->
+                    <a href="https://www.forbes.com/profile/mahmoud-wagih/" target="_blank" class="news-item">
+                        <img src="images/forbes.jpg" alt="Forbes">
+                        <p>RX Watt founder on Forbes 30U30 List for Science</p>
+                    </a>
+                     <a href="https://raeng.org.uk/news/sir-george-macfarlane-medal-2025/" target="_blank" class="news-item">
+                        <img src="images/raeng.jpeg" alt="Royal Academy of Engineering logo">
+                        <p>"Green wireless Charging" wins national engineering academy medal"</p>
+                    </a>
+                      <a href="https://www.gov.uk/government/news/government-backs-next-wave-of-semiconductor-start-ups-to-scale-up-growth" target="_blank" class="news-item">
+                        <img src="images/DSIT.png" alt="DSIT logo">
+                        <p>"RX Watt featured from ChipStart semiconductor startups by DSIT"</p>
+                    </a>
+                     <a href="https://www.theengineer.co.uk/content/news/battery-free-sensors-from-rx-watt-power-rail-monitoring/" target="_blank" class="news-item">
+                        <img src="images/engineer.png" alt="The Engineer Logo">
+                        <p>"Battery-free sensors for realtime sensing on rail carriages"</p>
+                    </a>
+                      <a href="https://www.iotinsider.com/transport/battery-free-sensors-benefit-train-carriages/" target="_blank" class="news-item">
+                        <img src="images/iot.jpg" alt="IOT Insider Logo">
+                        <p>"Battery-Free Rail IoT"</p>
+                    </a>
+
+                      <a href="https://www.iotinsider.com/transport/battery-free-sensors-benefit-train-carriages/" target="_blank" class="news-item">
+                        <img src="images/iot.jpg" alt="IOT Insider Logo">
+                        <p>"Battery-Free Rail IoT"</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team">
+            <div class="section-inner">
+                <h2 data-aos="fade-up">Our Team</h2>
+                <div class="team-container">
+                    <!-- Team member image paths reverted to original -->
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100"
+                         data-name="Mahmoud Wagih"
+                         data-bio="Dr Mahmoud Wagih is the Founder of RX Watt following 8 years of R&D in RF power transfer. He is an inventor of 3 patents, author of 120+ research papers, and has raised over £17M in research funding; he is a Reader at the University of Glasgow leading the Green Electronics Lab. He won over 25 research awards including the top Royal Academy of Engineering Medal for Early Career Achievements, is an IEEE Distinguished Lecturer, listed in the Forbes 30 Under 30, and others."
+                         data-img="images/mahmoud.png">
+                        <img src="images/mahmoud.png" alt="Team Member 1">
+                        <h4>Mahmoud Wagih</h4>
+                        <p>Founder & CEO</p>
+                        <a href="#" target="_blank" class="linkedin-link">LinkedIn</a>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200"
+                         data-name="Martin Bradley"
+                         data-bio="Product and market segment director with expertise in creating new opportunities and revenue streams. Expert at bridging marketing and engineering functions, MBA and chartered engineer, having 30 years of experience in mobile, defence, and semiconductor sectors. Skilled in financial investment appraisal and company valuation. Former US investment banking sell side equity analyst."
+                         data-img="images/martin.jfif">
+                        <img src="images/martin.jfif" alt="Team Member 2">
+                        <h4>Martin Bradley</h4>
+                        <p>Advisor</p>
+                        <a href="#" target="_blank" class="linkedin-link">LinkedIn</a>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="300"
+                         data-name="Chris Hillier"
+                         data-bio="Chris is a successful technology entrepreneur with global experience of company start-up, business development, corporate governance, IP management, product development, market analysis and the development and successful execution of financial and strategic initiatives."
+                         data-img="images/chris.jpg">
+                        <img src="images/chris.jpg" alt="Team Member 3">
+                        <h4>Chris Hillier</h4>
+                        <p>Advisor</p>
+                        <a href="#" target="_blank" class="linkedin-link">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- "Supported By" Logos Section -->
+		<section id="supported-by" class="light-section">
+            <div class="section-inner" data-aos="fade-up">
+				<center>
+                <h3 style="color:black">Supported By <br><br></h3>
+                <div class="logos-container">
+                    <!-- Supporter image paths reverted to original -->
+					<img src="images/ukic.jpg" alt="UK IC Fellowship">
+					<img src="images/dsit.png" alt="DSIT">
+                    <img src="images/siliconcat.webp" alt="Silicon Catalyst ChipStart">
+                    <img src="images/innovuk.png" alt="Innovate UK">
+                    <img src="images/stac.png" alt="STAC">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Team Member Bio Popup/Modal -->
+    <div id="modal-container">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-img" src="" alt="Team Member Photo">
+            <h3 id="modal-name"></h3>
+            <p id="modal-bio"></p>
         </div>
-    </section>
-
-    <section id="contact" class="normal-section">
-      
-         <h1> <FONT COLOR=#C1D100>Sustainability</FONT></h1> 
-        <!-- Add contact form or other relevant information here -->
-		<br>
-			<p> In the UK, around 40,000 tonnes of portable batteries were sold in 2020, over 22,000 batteries were not recycled.</p>
-			<br>
-			<p>As we eliminate single-use batteries, we are committed to building sustainable electronic systems, our solutions are backed by environmental life-cycle assessments (LCAs) <br>for <FONT COLOR=#C1D100>demonstrated reductions in the system's carbon footprint</FONT>.</p>
-		<br>
-        <!-- Add contact form or other relevant information here -->
-
-
-	  
-    </section>
-
-    <section id="team" class="normal-section">
-
-        <h2>Our Team</h2>
-
-        <p>RX Watt's is a Spin-Out from the <a href="https://www.gla.ac.uk/research/az/csi/greenrf/" style="color: #FFFFFF;">Green RF-Enabled Electronics Lab</a>, based in the University of Glasgow.</p>
-	  <!-- Add contact form or other relevant information here
-	  
-		<div class="founder-card">
-			<img src="images/mw_profile.jpg" alt="Founder Name">
-			<div class="bio">
-				<h3 class="founder-name">Dr Mahmoud Wagih</h3>
-				<h4>Founding Director</h4>
-				<p>A leading wireless power innovator, RF engineering expert, and a multi-award-winning researcher</P>
-				<a href="https://www.linkedin.com/in/mahmoud-wagih/"><i class="fa-brands fa-linkedin"></i></a>
-			</div>
-		</div>  -->
-
-
-    </section>
- 
+    </div>
+    
     <footer>
-        <p>&copy; 2023 RX Watt Ltd. | All rights reserved</p>
+        <p>&copy; 2025 rx watt. All Rights Reserved.</p>
     </footer>
 
-    <!-- Smooth scrolling script -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- AOS Animation Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
 </body>
 </html>
