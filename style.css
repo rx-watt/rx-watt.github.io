@@ -279,47 +279,129 @@ nav ul a:hover {
     margin: 1rem auto 0;
 }
 
-#news {
-    background-color: white;
-	padding-left: 0;
-    padding-right: 0;
-}
-.news-container {
-    max-width: 100%;     /* full width */
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1rem;     /* optional side padding */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-}
-.news-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-}
-.news-item img {
-    max-height: 120px;
-	max-width: 180;
-	width: auto;
+/*
+  Seamless News Ticker CSS
 
-    opacity: 1;
-    transition: var(--transition-smooth);
-    margin-bottom: 1.5rem;
+  This version creates a truly continuous horizontal scrolling effect
+  that loops seamlessly without jumping. The animation pauses on hover.
+
+  IMPORTANT: For this seamless loop to work, you MUST duplicate
+  all of the .news-item elements inside the .news-container in your HTML.
+  The animation is designed to work with two identical sets of items.
+
+  Example HTML Structure:
+  <div class="news-container">
+    <!-- Original Items -->
+    <a class="news-item">...</a>
+    <a class="news-item">...</a>
+    <a class="news-item">...</a>
+    <!-- DUPLICATED Items -->
+    <a class="news-item">...</a>
+    <a class="news-item">...</a>
+    <a class="news-item">...</a>
+  </div>
+*/
+
+/* 1. Keyframe animation for a seamless horizontal scroll */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /*
+      This is the key change. We move the container by exactly 50%
+      of its total width. Since the container holds two sets of items,
+      this moves it by the width of one full set. When the animation
+      loops, the second set is in the exact position the first set
+      started in, creating a seamless and continuous effect.
+    */
+    transform: translateX(-50%);
+  }
 }
+
+#news {
+  background-color: white;
+  padding: 2rem 0; /* Added some vertical padding for aesthetics */
+  /* Crucially, hide the overflowing content to create the ticker effect */
+  overflow: hidden;
+  position: relative; /* Required for the fade-out effect */
+}
+
+/* 2. Add a fade-out effect on the edges for a smoother appearance */
+#news::before,
+#news::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    z-index: 2;
+}
+#news::before {
+    left: 0;
+    background: linear-gradient(to right, white 20%, transparent);
+}
+#news::after {
+    right: 0;
+    background: linear-gradient(to left, white 20%, transparent);
+}
+
+.news-container {
+  /* Use flexbox for a single horizontal row of items */
+  display: flex;
+  /*
+    With duplicated items in the HTML, this will naturally become
+    twice as wide, which is essential for the seamless translateX(-50%) effect.
+  */
+  width: max-content;
+
+  /* 3. Apply the marquee animation */
+  /* The animation-duration (e.g., 40s) controls the speed. */
+  animation: marquee 30s linear infinite;
+}
+
+/* 4. Pause the animation when the user hovers over the container */
+.news-container:hover {
+  animation-play-state: paused;
+}
+
+.news-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  /* Add horizontal margin to create space between items */
+  margin: 0 1rem;
+  /* Giving items a consistent width helps with the scrolling effect */
+  width: 250px;
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.news-item img {
+  max-height: 90px;
+  max-width: 180px;
+  width: auto;
+  opacity: 1;
+  transition: 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
 .news-item p {
-    font-size: 1rem;
-    transition: var(--transition-smooth);
-    color: var(--brand-teal);
-    font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  color: #17a2b8; /* Example color for --brand-teal */
+  font-weight: 600;
+  white-space: normal; /* Allow text to wrap if it's long */
 }
+
+/* This is your original hover effect, which still works perfectly */
 .news-item:hover p {
-    color: black;
+  color: black;
 }
+
+
+
 
 #team {
     background-color: var(--bg-dark);
